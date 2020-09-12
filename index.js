@@ -7,7 +7,10 @@ app.use('/',require('./routes'));
 
 //setting up ejs
 app.set('view engine','ejs');
-app.set('views','.\views');
+app.set('views','./views');
+
+//connecting mongoose
+const db=require('./config/mongoose');
 
 app.listen(port,function(err){
     if(err)
