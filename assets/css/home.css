@@ -1,0 +1,126 @@
+input:focus, textarea,select,button {
+    outline: none !important;
+}
+#todoBox{
+    width: 60%;
+    height: auto;
+    margin-left:20%;
+    background-image: linear-gradient(30deg,#2bce9a,#39d1a1);
+    border-radius:30px;
+    border:5px solid lightgray;
+
+}
+/*header*/
+header i,h1{
+    display: inline;
+    color: white;
+    font-style:italic;
+    font-size: 30px;
+    padding-top:20px;
+    margin-bottom: 20px;
+}
+
+header i{
+    margin-left: 40%;
+}
+
+header h1{
+    margin-left: 10px;
+}
+
+/*Enter your work*/
+#enterWorkBox label{
+    margin-left: 10%;
+    width: 80%;
+    font-size:20px;
+    color: grey;
+    background-color: #8af8d5;
+    font-weight: 200;
+    display: block;
+    padding-left:3px;
+    box-sizing: border-box;
+}
+#enterWorkBox input,select{
+    margin-left: 10%;
+    width:80%;
+    height:50px;
+    display: block;
+    background-color:  #8af8d5;
+    border: none;
+    font-size: large;
+    color: rgb(133, 130, 130);
+    margin-bottom:10px;
+}
+
+#enterWorkBox button{
+    border: none;
+    background-color: rgb(182, 17, 182);
+    color: white;
+    font-size: 20px;
+    margin-left: 40%;
+    width:150px;
+    height:50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#enterWorkBox button i{
+    margin-right:10px;
+}
+
+#enterWorkBox button:hover{
+   box-shadow: 0px 0px 6px 4px white;
+}
+
+/*display task*/
+#displayWorkBox{
+    width:85%;
+    margin-left:5%;
+}
+ul{
+    list-style: none;
+}
+#task {
+    display: flex;
+    background-color: #8af8d5;
+    color: rgb(182, 17, 182);
+    font-size: 20px;
+    padding:0px 10px;
+    margin-top:10px;
+     
+}
+#task:hover {
+    background-color: lightgray;
+    color: rgb(99, 92, 92);  
+}
+#task #details
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+#task #delete-button{
+    width:10%;
+    padding-left:50px;
+    padding-top: 38px;
+}
+#task #delete-button a{
+   text-decoration: none;
+   color:red;
+}
+#displayDate{
+    font-size:15px;
+}
+#displayCategory{
+    width: 70px;
+    height:35px;
+    background-color: lightcoral;
+    font-size:15px;
+    color: white;
+    border: none;
+    margin-left:15%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+}

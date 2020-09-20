@@ -3,10 +3,57 @@
         <title>
             <%= title%>
         </title>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
     <body>
-        <h1>
-            What task u want to do?
-        </h1>
+        <div id="todoBox">
+            <header>
+                <i class="fas fa-tasks"></i><h1>TODO App</h1>
+            </header>
+            <div id="enterWorkBox">
+                <form action="/create-list" method="POST">
+                    <label for="description">Description</label>
+                    <input type="text" id="writeDescription" name="description" placeholder="What you want to do?" required>
+                    <label for="chooseCategory">Category</label>
+                    <select id="chooseCategory" name="category">
+                        <option>Choose a Category</option>
+                        <option>Personal</option>
+                        <option>Work</option>
+                        <option>School</option>
+                        <option>College</option>
+                        <option>Other</option>
+                    </select>
+                    <label for="endDate">Due date</label>
+                    <input type="date" id="endDate" name="duedate" min="2020-09-20" max="2030-12-31">  
+                    <button type="submit"><i class="fas fa-plus"></i>ADD TASK</button> 
+                </form>
+          </div>
+          <div id="displayWorkBox">
+                <ul>
+                    <% for(let i of todo_list){%>
+                        <li id="task">
+                            <div id="details">
+                                <div>
+                                <p id="displayDescription"><i class="fas fa-check"></i>&nbsp;<%=i.description%></p>
+                                <p id="displayDate"><i class="fas fa-calendar">&ensp;</i><%=i.duedate%></p>
+                                </div>
+                                <button id="displayCategory"><%=i.category%></button>
+                                
+                            </div>
+                            <div id="delete-button">
+                                <a href="/delete-task/?id=<%=i._id%>">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                                
+                            </div>
+                        </li>
+                        
+                        
+                    <%}%>
+                </ul>
+          </div>
+          
+        </div>
     </body>
 </html>
